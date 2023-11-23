@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VENVEO</title>
+    <link rel="icon" href="./assets/images/webp/logo.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="./assets/css/root.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: "1rem",
+                    },
+                },
+
+                extend: {
+                    fontFamily: {
+                        Maison: ['Maison-Neue'],
+                        Schmal: 'SohneSchmal',
+                    },
+                    colors: {
+                        dark: "#111111",
+                        gray: "#585858",
+                        blue: "#01639E",
+                        red: "#CB372B",
+                        lightblue: "#C7DAE6",
+                        primary_black: "#0F021D",
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="backToTop()" class="fixed bottom-0 right-0 mb-6 mr-6 z-[99] bg-[#5cd93d] p-4 rounded-[50px]"
+        id="topBtn">
+        <svg width="20" height="20" fill="white" viewBox="0 0 16 16">
+            <path fillRule="evenodd"
+                d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z">
+            </path>
+            <path fillRule="evenodd"
+                d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z">
+            </path>
+        </svg>
+    </button>
+    <!-- 1st_section -->
+    <section class="overflow-hidden">
+        <nav
+            class=" bg-[url('/assets/images/webp/Isolation_Mode.webp')] bg-no-repeat bg-center bg-cover relative min_h_screen">
+            <img class="absolute right-0 bottom-0 lg:block hidden" src="./assets/images/webp/Left_img.webp"
+                alt="Left_img">
+            <img class="absolute left-0 top-0 w-[200px] sm:w-[300px] md:w-[320px]"
+                src="./assets/images/webp/Right_img.webp" alt="">
+            <div class="2xl:container m-auto">
+                <div class="flex justify-between">
+                    <div class="pt-8 lg:pt-10 lg:ps-14 md:ps-8 sm:ps-6 ps-4">
+                        <img class="logo" src="./assets/images/webp/Venveo Logo.webp" alt="spa-logo">
+                    </div>
+
+                    <div class="hidden lg:block">
+                        <div class="flex">
+                            <ul class="p-0 m-0 flex">
+                                <li class="bg-white py-[28px] px-[16px]"><a
+                                        class="text-black font-Maison font-medium text-[15px]" href="#">How
+                                        We Help <span class="text-[6px]">▼</span></a>
+                                </li>
+
+                                <li class="bg-white py-[28px] px-[16px]"><a
+                                        class="text-black font-Maison font-medium text-[15px]" href="#">Who We
+                                        Help <span class="text-[6px]">▼</span></a>
+                                </li>
+
+                                <li class="bg-white py-[28px] px-[16px]"><a
+                                        class="text-black font-Maison font-medium text-[15px]" href="#">Why
+                                        Venveo <span class="text-[6px]">▼</span></a>
+                                </li>
+
+                                <li class="bg-white py-[28px] px-[16px]"><a
+                                        class="text-black font-Maison font-medium text-[15px]" href="#">Resources</a>
+                                </li>
+
+                                <li class="bg-white py-[29px] px-[18px]"><a href="#"><img
+                                            src="./assets/images/webp/Union.webp" alt=""></a></li>
+
+                            </ul>
+                            <div class="flex items-center bg-[#d2f038] py-[29px] px-[18px] gap-1">
+                                <a href="#" class="text-black font-Maison font-medium text-[15px]">Let’s Talk</a>
+                                <img src="./assets/images/png/arrow straight.png" alt="arrow straight.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <img class="lg:hidden block mt-12 w-[25px] h-[25px]" src="./assets/images/webp/Union.webp"
+                        alt="Union.webp">
+
+                    <button id="opennav" onclick="opennav()" class="menu text-white lg:hidden items-center flex"
+                        type="button"><img src="./assets/images/png/burgerMenu.png" alt=""></button>
+                    <div id="menu"
+                        class="flex justify-center items-center w-full h-full z-50 fixed top-0 left-[-100%] duration-300 ease-linear lg:hidden bg-[#097980]">
+                        <button onclick="closenav()" type="button"
+                            class="absolute top-[0] right-[2%] closemenu text-white text-[68px]">&times;</button>
+
+
+                        <div class="flex-column">
+                            <ul class="p-0 m-0 lg:flex flex-column text-center block lg:hidden">
+                                <li onclick="closenav()" class="bg-white py-[28px] px-[16px]"><a
+                                        class="text-black font-Maison font-medium text-[15px]" href="#">How
+                                        We Help <span class="text-[6px]">▼</span></a>
+                                </li>
+
+                                <li onclick="closenav()" class="bg-white py-[28px] px-[16px] my-4"><a
+                                        class="text-black font-Maison font-medium text-[15px]" href="#">Who We
+                                        Help <span class="text-[6px]">▼</span></a>
+                                </li>
+
+                                <li onclick="closenav()" class="bg-white py-[28px] px-[16px] mb-4"><a
+                                        class="text-black font-Maison font-medium text-[15px]" href="#">Why
+                                        Venveo <span class="text-[6px]">▼</span></a>
+                                </li>
+
+                                <li onclick="closenav()" class="bg-white py-[28px] px-[16px]"><a
+                                        class="text-black font-Maison font-medium text-[15px]" href="#">Resources</a>
+                                </li>
+                            </ul>
+
+                            <div class="flex items-center bg-[#d2f038] py-[29px] px-[18px] gap-1 mt-4">
+                                <a href="#" class="text-black font-Maison font-medium text-[15px]">Let’s Talk</a>
+                                <img src="./assets/images/png/arrow straight.png" alt="arrow straight.png">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <div class="pt-20">
+                <div class="flex items-center justify-center text-center">
+                    <p
+                        class="text-white md:text-[120px] sm:text-[90px] text-[56px] max-w-[800px] px-3 font-Schmal font-bold md:leading-[104px] sm:leading-[70px] leading-[52px]">
+                        MAKE
+                        MARKETING
+                        <span class="block">A <span class="relative">GROWTH <img
+                                    class="absolute start-0 max-w-[300px] w-full"
+                                    src="./assets/images/webp/hero_squiggle.webp" alt=""></span> MACHINE</span>
+                    </p>
+                </div>
+
+                <div class="flex items-center justify-center text-center pt-8 px-2">
+                    <p
+                        class="text-[22px] sm:text-2xl font-light font-Maison leading-[30px] max-w-[680px] text-white leading-8">
+                        We focus on
+                        results.
+                        Not
+                        just
+                        chatter. Elevate
+                        your business with
+                        our
+                        top-tier
+                        services
+                        and
+                        tech. Get a proposal now.</p>
+                </div>
+
+                <div class="flex items-center justify-center pt-8 px-3">
+                    <div class="border-2 border-solid border-white rounded-[64px] max-w-[448px] w-full">
+                        <div class="flex justify-between items-center">
+                            <input type="email" placeholder="Enter Your Email"
+                                class="bg-transparent max-w-[220px] py-5 ps-7 w-full text-white font-Maison text-[15px] leading-5 opacity-60 font-normal">
+
+                            <a href="#"
+                                class="pe-6 text-white font-Maison text-[15px] leading-5 font-normal">Analyze</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="relative">
+            <img class="w-full absolute !bottom-[28%] left-0" src="./assets/images/webp/light_blue_line.webp" alt="">
+            <div class="flex justify-center items-center mt_-32 relative">
+                <div class="relative">
+                    <img src="./assets/images/webp/hand_img.webp" alt="hand_img.webp">
+                    <img class="absolute lg:left-[-5%] right-[5%] lg:bottom-[25%] bottom-0 width-[90px] sm:width-[107px]"
+                        src="./assets/images/webp/made_for_brands.webp" alt="">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 2nd_section -->
+    <section class="overflow-hidden relative">
+        <div class="md:pt-20 sm:pt-16 pt-14">
+            <p class="flex items-center justify-center font-Maison text-[15px] text-normal">F e a t u r e d <span
+                    class="ps-3">i n</span></p>
+            <div class="max-w-[1026px] mx-auto pt-12 md:pb-56 sm:pb-44 pb-32">
+                <div class="flex gap-28 overflow-scroll">
+
+                    <img src="./assets/images/webp/WSJ.webp" alt="WSJ">
+
+                    <img src="./assets/images/webp/Entrepruner.webp" alt="Entrepruner">
+
+                    <img src="./assets/images/webp/Fortune.webp" alt="Fortune">
+
+                    <img src="./assets/images/webp/Forbes.webp" alt="Forbes">
+
+                    <img src="./assets/images/webp/Inc.webp" alt="Inc">
+
+                </div>
+            </div>
+        </div>
+
+        <img class="absolute bottom-[20%] w-full" src="./assets/images/webp/dual_lines.webp" alt="">
+    </section>
+    <!-- 3rd_section -->
+    <section class="overflow-hidden">
+        <p
+            class="font-Maison md:text-[30px] sm:text-[26px] text-[24px] px-3 text-center text-light flex justify-center">
+            Driving digital
+            revenue for
+            over
+        </p>
+        <p
+            class="font-Schmal md:text-[80px] sm:text-[70px] text-[56px] text-bold leading-[70px] pt-2 flex items-center justify-center text-center px-3 pb-20">
+            <span class="relative">1,400+ <img class="absolute bottom-[-15px]" src="./assets/images/png/red_line.png"
+                    alt=""></span>satisfied clients.
+        </p>
+
+        <div class="2xl:container">
+            <div class="flex pb-14 items-center justify-between center_slider">
+                <div class="bg-[url('./assets/images/webp/card_bg_1.webp')] max-w-[440px]">
+                    <div class="pt-5 px-4 pb-4">
+                        <div class="border-solid border-2 bg-white border-white rounded-3xl p-6">
+                            <img src="./assets/images/webp/AmberBook.webp" alt="">
+                            <p
+                                class="font-Maison lg:text-[30px] md:text-[28px] sm:text-[26px] text-[24px] pt-6 font-light leading-[35px]">
+                                Driving digital revenue<span class="block">for over 1,000+</span> satisfied clients.</p>
+                            <div class="pb-20">
+                                <p class="pt-4 font-Maison text-[15px] leading-5 tracking-[2.6px]">Elevate your business
+                                    with our top-tier services and tech</p>
+                            </div>
+                            <div class="flex items-center gap-3 pb-3">
+                                <a href="#" class="font-Maison sm:text-[18px] text-[15px] font-semibold leading-6">Learn
+                                    more</a>
+                                <a href="#"><img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between px-8 pt-6 pb-1 gap-4">
+                            <span class="mb-0">
+                                <p
+                                    class="font-Schmal lg:text-[50px] md:text-[47px] sm:text-[44px] text-[40px] leading-[44px] font-bold">
+                                    80%</p>
+                                <p class="font-Maison font-normal sm:font-[16px] font-[15px] leading-6">Leads</p>
+                            </span>
+                            <span class="mb-0">
+                                <p
+                                    class="font-Schmal lg:text-[50px] md:text-[47px] sm:text-[44px] text-[40px] leading-[44px] font-blod">
+                                    2X</p>
+                                <p class="font-Maison font-normal sm:font-[16px] font-[15px] leading-6">Ad Leads</p>
+                            </span>
+                            <span class="mb-0">
+                                <p
+                                    class="font-Schmal lg:text-[50px] md:text-[47px] sm:text-[44px] text-[40px] leading-[44px] font-blod">
+                                    520%</p>
+                                <p class="font-Maison font-normal sm:font-[16px] font-[15px] leading-6">Web Traffic</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[url('./assets/images/webp/card_bg_2.webp')] max-w-[440px]">
+                    <div class="pt-5 px-4 pb-4">
+                        <div class="border-solid border-2 bg-white border-white rounded-3xl p-6">
+                            <img src="./assets/images/webp/Fransworth.webp" alt="">
+                            <p
+                                class="font-Maison lg:text-[30px] md:text-[28px] sm:text-[26px] text-[24px] pt-6 font-light leading-[35px]">
+                                Driving digital revenue<span class="block">for over 1,000+</span> satisfied clients.</p>
+                            <div class="pb-20">
+                                <p class="pt-4 font-Maison text-[15px] leading-5 tracking-[2.6px]">Elevate your business
+                                    with our top-tier services and tech</p>
+                            </div>
+                            <div class="flex items-center gap-3 pb-3">
+                                <a href="#" class="font-Maison sm:text-[18px] text-[15px] font-semibold leading-6">Learn
+                                    more</a>
+                                <a href="#"><img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between px-8 pt-6 pb-1 gap-4">
+                            <span class="mb-0">
+                                <p
+                                    class="font-Schmal lg:text-[50px] md:text-[47px] sm:text-[44px] text-[40px] leading-[44px] font-bold">
+                                    80%</p>
+                                <p class="font-Maison font-normal sm:font-[16px] font-[15px] leading-6">Leads</p>
+                            </span>
+                            <span class="mb-0">
+                                <p
+                                    class="font-Schmal lg:text-[50px] md:text-[47px] sm:text-[44px] text-[40px] leading-[44px] font-blod">
+                                    2X</p>
+                                <p class="font-Maison font-normal sm:font-[16px] font-[15px] leading-6">Ad Leads</p>
+                            </span>
+                            <span class="mb-0">
+                                <p
+                                    class="font-Schmal lg:text-[50px] md:text-[47px] sm:text-[44px] text-[40px] leading-[44px] font-blod">
+                                    520%</p>
+                                <p class="font-Maison font-normal sm:font-[16px] font-[15px] leading-6">Web Traffic</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-[url('./assets/images/webp/card_bg_3.webp')] max-w-[440px]">
+                    <div class="pt-5 px-4 pb-4">
+                        <div class="border-solid border-2 bg-white border-white rounded-3xl p-6">
+                            <img src="./assets/images/webp/Us_Lum.webp" alt="">
+                            <p
+                                class="font-Maison lg:text-[30px] md:text-[28px] sm:text-[26px] text-[24px] pt-6 font-light leading-[35px]">
+                                Driving digital revenue
+                                <span class="block">for over
+                                    1,000+</span> satisfied
+                                clients.
+                            </p>
+                            <div class="pb-20">
+                                <p class="pt-4 font-Maison text-[15px] leading-5 tracking-[2.6px]">Elevate your business
+                                    with our top-tier services and tech
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-3 pb-3">
+                                <a href="#" class="font-Maison sm:text-[18px] text-[15px] font-semibold leading-6">Learn
+                                    more</a>
+                                <a href="#"><img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between px-8 pt-6 pb-1 gap-4">
+                            <span class="mb-0">
+                                <p
+                                    class="font-Schmal lg:text-[50px] md:text-[47px] sm:text-[44px] text-[40px] leading-[44px] font-bold">
+                                    80%</p>
+                                <p class="font-Maison font-normal sm:font-[16px] font-[15px] leading-6">Leads</p>
+                            </span>
+                            <span class="mb-0">
+                                <p
+                                    class="font-Schmal lg:text-[50px] md:text-[47px] sm:text-[44px] text-[40px] leading-[44px] font-blod">
+                                    2X</p>
+                                <p class="font-Maison font-normal sm:font-[16px] font-[15px] leading-6">Ad Leads</p>
+                            </span>
+                            <span class="mb-0">
+                                <p
+                                    class="font-Schmal lg:text-[50px] md:text-[47px] sm:text-[44px] text-[40px] leading-[44px] font-blod">
+                                    520%</p>
+                                <p class="font-Maison font-normal sm:font-[16px] font-[15px] leading-6">Web Traffic</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 4th_section -->
+    <section class="overflow-hidden relative">
+        <!-- <img class="w-full absolute top-[30%] left-0" src="./assets/images/webp/yellow_lines.webp" alt=""> -->
+        <div class="pt-16 mt-2">
+            <p
+                class="font-Maison font-light text-[24px] sm:text-[27px]  md:text-[30px] px-3 flex items-center justify-center text-center leading-[30px]">
+                Problems we
+                solve.</p>
+
+            <div class="flex items-center justify-center text-center pt-2">
+                <p
+                    class="font-Schmal font-bold text-[60px] sm:text-[65px] md:text-[70px] lg:text-[80px] px-3 leading-[70px] max-w-[520px]">
+                    Digital
+                    Marketing
+                    for today’s Business</p>
+            </div>
+
+            <div class="flex items-center justify-center text-center">
+                <p class="text-[15px] leading-5 font-Maison max-w-[705px] pt-5 px-8 tracking-[3px]">We help companies
+                    scale their strategies across multiple channels to drive more revenue, more quickly, without cutting
+                    corners.</p>
+            </div>
+
+            <div class="max-w-[1070px] mx-auto pb-8">
+
+                <div class="lg:flex w-full items-center justify-center pt-20 px-3 gap-16">
+                    <div class="flex items-center justify-center">
+                        <div
+                            class="border-2 border-solid border-[#00AFB5] max-w-[503px] rounded-[25px] py-9 sm:py-12 ps-8 sm:pe-16 pe-6">
+                            <div class="sm:flex gap-6">
+                                <img class="w-[54px] h-[54px]" src="./assets/images/webp/4dots.png" alt="4dots">
+                                <div class="mb-0">
+
+                                    <h1 class="font-Maison text-[24px] sm:text-[27px] md:text-[30px] text-light pb-4">My
+                                        website isn’t <span class="block">getting
+                                            enough traffic</span></h1>
+
+                                    <p class="font-Maison text-[15px] font-medium leading-5 tracking-[2.5px]">Without
+                                        consistent site traffic, you’re missing out on valuable visitors, leads, and
+                                        revenue. Thankfully, custom SEO solutions can get you back on track by boosting
+                                        your presence in search engine results, so more people can find and visit your
+                                        site.</p>
+
+                                    <p class="pt-4 font-Maison font-semibold leading-6 text-[15px]">
+                                        <span class="blcok">. Boost your
+                                            presence
+                                            in search
+                                            results</span>
+                                        <span class="block">. Capture targeted site traffic</span>
+                                        <span class="block">. Turn site visitors into customers</span>
+                                    </p>
+
+                                    <a href="#"
+                                        class="flex items-center gap-2 mt-8 font-Maison text-[15px] font-semibold leading-5">Explore
+                                        SEO Services
+                                        <img src="./assets/images/webp/left-arrow.png" alt="arrow"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center pt-16 lg:pt-0">
+                        <div
+                            class="border-2 border-solid border-[#00AFB5] max-w-[503px] rounded-[25px] py-8 sm:py-12 ps-8 sm:pe-16 pe-6">
+                            <div class="sm:flex gap-6">
+                                <img class="w-[54px] h-[54px]" src="./assets/images/webp/4cards.png" alt="4dots">
+                                <div class="mb-0">
+
+                                    <h1 class="font-Maison text-[24px] sm:text-[27px] md:text-[30px] text-light pb-4">My
+                                        CPL from digital ad <span class="block">campaigns is too high</span></h1>
+
+                                    <p class="font-Maison text-[15px] font-medium leading-5 tracking-[2.5px]">
+                                        Without
+                                        consistent site
+                                        traffic,
+                                        you’re missing
+                                        out
+                                        on
+                                        valuable visitors, leads,
+                                        and revenue. Thankfully, custom SEO
+                                        solutions can get you back on track by boosting your presence in search engine
+                                        results, so more people can find and
+                                        visit your site.</p>
+
+                                    <p class="pt-4 font-Maison font-semibold leading-6 text-[15px]">
+                                        <span class="blcok">. Boost your
+                                            presence
+                                            in search
+                                            results</span>
+                                        <span class="block">. Capture targeted site traffic</span>
+                                        <span class="block">. Turn site visitors into customers</span>
+                                    </p>
+
+                                    <a href="#"
+                                        class="flex items-center gap-2 mt-8 font-Maison text-[15px] font-semibold leading-5">Explore
+                                        SEO Services
+                                        <img src="./assets/images/webp/left-arrow.png" alt="arrow"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:flex w-full items-center justify-center pt-16 px-3 gap-16">
+                    <div class="flex items-center justify-center">
+                        <div
+                            class="border-2 border-solid border-[#00AFB5] max-w-[503px] rounded-[25px] py-9 sm:py-12 ps-8 sm:pe-16 pe-6">
+                            <div class="sm:flex gap-6">
+                                <img class="w-[54px] h-[54px]" src="./assets/images/webp/semicircle.png" alt="4dots">
+                                <div class="mb-0">
+
+                                    <h1 class="font-Maison text-[24px] sm:text-[27px] md:text-[30px] text-light pb-4">My
+                                        website isn’t <span class="block">getting
+                                            enough leads</span></h1>
+
+                                    <p class="font-Maison text-[15px] font-medium leading-5 tracking-[2.5px]">
+                                        Without
+                                        consistent site
+                                        traffic,
+                                        you’re missing
+                                        out
+                                        on
+                                        valuable visitors, leads,
+                                        and revenue. Thankfully, custom SEO
+                                        solutions can get you back on track by boosting your presence in search engine
+                                        results, so more people can find and
+                                        visit your site.</p>
+
+                                    <p class="pt-4 font-Maison font-semibold leading-6 text-[15px]">
+                                        <span class="blcok">. Boost your
+                                            presence
+                                            in search
+                                            results</span>
+                                        <span class="block">. Capture targeted site traffic</span>
+                                        <span class="block">. Turn site visitors into customers</span>
+                                    </p>
+
+                                    <a href="#"
+                                        class="flex items-center gap-2 mt-8 font-Maison text-[15px] font-semibold leading-5">Explore
+                                        SEO Services
+                                        <img src="./assets/images/webp/left-arrow.png" alt="arrow"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center pt-16 lg:pt-0">
+                        <div
+                            class="border-2 border-solid border-[#00AFB5] max-w-[503px] rounded-[25px] py-9 sm:py-12 ps-8 sm:pe-16 pe-8">
+                            <div class="sm:flex gap-6">
+                                <img class="w-[54px] h-[54px]" src="./assets/images/webp/4_capsule.png" alt="4dots">
+                                <div class="mb-0">
+
+                                    <h1 class="font-Maison text-[24px] sm:text-[27px] md:text-[30px] text-light pb-4">My
+                                        website isn’t <span class="block">getting
+                                            enough traffic</span></h1>
+
+                                    <p class="font-Maison text-[15px] font-medium leading-5 tracking-[2.5px]">
+                                        Without
+                                        consistent site
+                                        traffic,
+                                        you’re missing
+                                        out
+                                        on
+                                        valuable visitors, leads,
+                                        and revenue. Thankfully, custom SEO
+                                        solutions can get you back on track by boosting your presence in search engine
+                                        results, so more people can find and
+                                        visit your site.</p>
+
+                                    <p class="pt-4 font-Maison font-semibold leading-6 text-[15px]">
+                                        <span class="blcok">. Boost your
+                                            presence
+                                            in search
+                                            results</span>
+                                        <span class="block">. Capture targeted site traffic</span>
+                                        <span class="block">. Turn site visitors into customers</span>
+                                    </p>
+
+                                    <a href="#"
+                                        class="flex items-center gap-2 mt-8 font-Maison text-[15px] font-semibold leading-5">Explore
+                                        SEO Services
+                                        <img src="./assets/images/webp/left-arrow.png" alt="arrow"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- 5th_section -->
+    <section class="overflow-hidden py-24">
+        <div class="bg-[url('/assets/images/webp/yellow_bg.webp')] bg-no-repeat bg-center bg-cover">
+            <div class="max-w-[1100px] mx-auto px-3 relative">
+                <img class="absolute left-[50%] bottom-[20%] md:block hidden"
+                    src="./assets/images/webp/Curved_arrow.webp" alt="">
+                <img class="absolute left-[60%] bottom-[20%] block md:hidden"
+                    src="./assets/images/webp/vertically_curved_arrow.webp" alt="">
+                <div class="md:flex items-center md:justify-between md:gap-14">
+                    <div class="flex items-center justify-center">
+                        <div class="mb-0">
+                            <p class="font-Maison font-normal text-[15px] pt-14 my-1 tracking-[2px]">Get Your Custom
+                                Marketing
+                                Plan</p>
+                            <p class="font-Maison font-light text-[40px] pb-20">Start earning more money now</p>
+                        </div>
+                    </div>
+
+                    <div class="pb-12 md:pb-0 !max-w-[449px] !w-full">
+                        <div class="bg-white border-2 border-solid border-white rounded-[64px] z-1 relative">
+                            <div class="flex items-center justify-between">
+                                <div class="py-5 pl-6">
+                                    <input type="text" placeholder="Enter Your Website"
+                                        class="placeholder-red font-Maison text-[15px] font-medium leading-5">
+                                </div>
+                                <a href="#" class="text-[15px] font-semibold leading-5 font-Maison pe-5">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- partner -->
+    <div class="overflow-hidden relative">
+        <img class="w-full absolute bottom-[4%]" src="./assets/images/webp/light_green.png" alt="">
+        <div class="pt-5">
+            <p
+                class="flex items-center justify-center font-Schmal text-center font-bold text-[60px] sm:text-[65px] md:text-[80px] leading-[52px] sm:leading-[70px] px-5">
+                THE GROWTH
+                PARTNER</p>
+            <p class="flex items-center justify-center font-Maison text-2xl sm:text-[27px] md:text-[30px] font-light">
+                you’ve been looking for.
+            </p>
+            <p
+                class="text-[15px] font-Maison flex items-center justify-center text-center pt-5 sm:pt-7 md:pt-11 tracking-[3px] px-5">
+                Businesses trust
+                Venveo to power
+                grow.
+            </p>
+        </div>
+
+        <div class="container py-20">
+            <div class="flex items-center justify-center">
+
+                <div class="my_container">
+                    <div class="flex items-center justify-center gap-20 pb-20">
+                        <button class="tablinks text-[18px] font-Maison font-semibold"
+                            onclick="openCity(event, 'London')" id="defaultOpen">Industry
+                            Expertise</button>
+                        <button class="tablinks text-[18px] font-Maison font-semibold"
+                            onclick="openCity(event, 'Paris')">ROI Focused</button>
+                        <button class="tablinks text-[18px] font-Maison font-semibold"
+                            onclick="openCity(event, 'Tokyo')">Proprietary Technology</button>
+                    </div>
+
+                    <div id="London" class="tabcontent relative">
+                        <div class="relative">
+                            <video class="w-[1300px] relative" autoplay muted loop
+                                src="./assets/images/png/cenimar_video.mov"></video>
+                            <div class="absolute top-0 left-0">
+                                <div class="xl:p-16">
+                                    <div class="flex items-center justify-between gap-24">
+                                        <div class="mb-0">
+                                            <p
+                                                class="text-white font-Schmal text-[80px] leading-[70px] whitespace-nowrap max-w-[415px]">
+                                                THE SMARTEST
+                                                <span class="block">MINDS IN
+                                                    THE</span>
+                                                INDUSTRY
+                                            </p>
+                                            <p
+                                                class="font-Maison text-[30px] text-white font-light max-w-[360px] leading-9">
+                                                Answer
+                                                our
+                                                questions and
+                                                listen to our
+                                                answers.</p>
+                                            <p
+                                                class="font-Maison text-white text-[15px] font-normal leading-5 max-w-[360px] tracking-[2.5px] mt-7">
+                                                This
+                                                is placeholder
+                                                but can add more the
+                                                business of
+                                                building,
+                                                some epic fails (and
+                                                how to avoid them) and everything
+                                                building science.</p>
+
+                                            <div class="pt-20">
+                                                <button
+                                                    class="text-white bg-[#ff4242] p-8 flex items-center justify-center gap-3">
+                                                    <img src="./assets/images/webp/Layer_1.png" alt="">
+                                                    <a href="#" class="font-Masion text-[15px] font-medium">Subscribe to
+                                                        Podcast <span class="text-[6px]">▼</span></a>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center flex-col gap-14">
+                                            <img src="./assets/images/webp/Home-Depot-Logo.webp" alt="Home-Depot-Logo">
+                                            <img src="./assets/images/webp/Lowe's.webp" alt="Lowe’s">
+                                            <img src="./assets/images/webp/AIA.webp" alt="AIA">
+                                            <img src="./assets/images/webp/risinger_build.webp" alt="risinger_build">
+                                            <img src="./assets/images/webp/houzz.webp" alt="houzz">
+                                        </div>
+
+                                        <div class="center_slide max-w-[500px]">
+
+                                            <div class="bg-white w-full max-w-[440px] py-9">
+                                                <div class="mb-0">
+                                                    <span class="flex items-center justify-center pb-8"><img
+                                                            class="rounded-3xl w-[382px]"
+                                                            src="./assets/images/webp/smilling_man.webp"
+                                                            alt="smilling_man"></span>
+                                                    <p class="font-Maison font-light text-[30px] leading-8 px-7">Matt
+                                                        Risinger on How to Develop Lasting Relationships with Builders
+                                                    </p>
+                                                    <p
+                                                        class="font-Maison px-7 leading-5 tracking-[3px] text-[15px] font-semibold">
+                                                        Chief Builder of Rising Build and founder of the<span
+                                                            class="underline">Build Show Network</span></p>
+                                                    <a href="#"
+                                                        class="flex items-center font-Maison pt-11 px-7 gap-3 font-bold text-[15px] leading-5">Listen
+                                                        to Interview
+                                                        <img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="bg-white w-full max-w-[440px] py-9">
+                                                <div class="mb-0">
+                                                    <span class="flex items-center justify-center pb-8"><img
+                                                            class="rounded-3xl w-[382px]"
+                                                            src="./assets/images/webp/smilling_man.webp"
+                                                            alt="smilling_man"></span>
+                                                    <p class="font-Maison font-light text-[30px] leading-8 px-7">Matt
+                                                        Risinger on How to Develop Lasting Relationships with Builders
+                                                    </p>
+                                                    <p
+                                                        class="font-Maison px-7 leading-5 tracking-[3px] text-[15px] font-semibold">
+                                                        Chief Builder of Rising Build and founder of the<span
+                                                            class="underline">Build Show Network</span></p>
+                                                    <a href="#"
+                                                        class="flex items-center font-Maison pt-11 px-7 gap-3 font-bold text-[15px] leading-5">Listen
+                                                        to Interview
+                                                        <img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="bg-white w-full max-w-[440px] py-9">
+                                                <div class="mb-0">
+                                                    <span class="flex items-center justify-center pb-8"><img
+                                                            class="rounded-3xl w-[382px]"
+                                                            src="./assets/images/webp/smilling_man.webp"
+                                                            alt="smilling_man"></span>
+                                                    <p class="font-Maison font-light text-[30px] leading-8 px-7">Matt
+                                                        Risinger on How to Develop Lasting Relationships with Builders
+                                                    </p>
+                                                    <p
+                                                        class="font-Maison px-7 leading-5 tracking-[3px] text-[15px] font-semibold">
+                                                        Chief Builder of Rising Build and founder of the<span
+                                                            class="underline">Build Show Network</span></p>
+                                                    <a href="#"
+                                                        class="flex items-center font-Maison pt-11 px-7 gap-3 font-bold text-[15px] leading-5">Listen
+                                                        to Interview
+                                                        <img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Paris" class="tabcontent relative">
+                        <div class="relative">
+                            <video class="w-[1300px] relative" autoplay muted loop
+                                src="./assets/images/png/cenimar_video.mov"></video>
+                            <div class="absolute top-0 left-0">
+                                <div class="xl:p-16">
+                                    <div class="flex items-center justify-between gap-24">
+                                        <div class="mb-0">
+                                            <p
+                                                class="text-white font-Schmal text-[80px] leading-[70px] whitespace-nowrap max-w-[415px]">
+                                                THE SMARTEST
+                                                <span class="block">MINDS IN
+                                                    THE</span>
+                                                INDUSTRY
+                                            </p>
+                                            <p
+                                                class="font-Maison text-[30px] text-white font-light max-w-[360px] leading-9">
+                                                Answer
+                                                our
+                                                questions and
+                                                listen to our
+                                                answers.</p>
+                                            <p
+                                                class="font-Maison text-white text-[15px] font-normal leading-5 max-w-[360px] tracking-[2.5px] mt-7">
+                                                This
+                                                is placeholder
+                                                but can add more the
+                                                business of
+                                                building,
+                                                some epic fails (and
+                                                how to avoid them) and everything
+                                                building science.</p>
+
+                                            <div class="pt-20">
+                                                <button
+                                                    class="text-white bg-[#ff4242] p-8 flex items-center justify-center gap-3">
+                                                    <img src="./assets/images/webp/Layer_1.png" alt="">
+                                                    <a href="#" class="font-Masion text-[15px] font-medium">Subscribe to
+                                                        Podcast <span class="text-[6px]">▼</span></a>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center flex-col gap-14">
+                                            <img src="./assets/images/webp/Home-Depot-Logo.webp" alt="Home-Depot-Logo">
+                                            <img src="./assets/images/webp/Lowe's.webp" alt="Lowe’s">
+                                            <img src="./assets/images/webp/AIA.webp" alt="AIA">
+                                            <img src="./assets/images/webp/risinger_build.webp" alt="risinger_build">
+                                            <img src="./assets/images/webp/houzz.webp" alt="houzz">
+                                        </div>
+
+                                        <div class="center_slide max-w-[500px]">
+
+                                            <div class="bg-white w-full max-w-[440px] py-9">
+                                                <div class="mb-0">
+                                                    <span class="flex items-center justify-center pb-8"><img
+                                                            class="rounded-3xl w-[382px]"
+                                                            src="./assets/images/webp/smilling_man.webp"
+                                                            alt="smilling_man"></span>
+                                                    <p class="font-Maison font-light text-[30px] leading-8 px-7">Matt
+                                                        Risinger on How to Develop Lasting Relationships with Builders
+                                                    </p>
+                                                    <p
+                                                        class="font-Maison px-7 leading-5 tracking-[3px] text-[15px] font-semibold">
+                                                        Chief Builder of Rising Build and founder of the<span
+                                                            class="underline">Build Show Network</span></p>
+                                                    <a href="#"
+                                                        class="flex items-center font-Maison pt-11 px-7 gap-3 font-bold text-[15px] leading-5">Listen
+                                                        to Interview
+                                                        <img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="bg-white w-full max-w-[440px] py-9">
+                                                <div class="mb-0">
+                                                    <span class="flex items-center justify-center pb-8"><img
+                                                            class="rounded-3xl w-[382px]"
+                                                            src="./assets/images/webp/smilling_man.webp"
+                                                            alt="smilling_man"></span>
+                                                    <p class="font-Maison font-light text-[30px] leading-8 px-7">Matt
+                                                        Risinger on How to Develop Lasting Relationships with Builders
+                                                    </p>
+                                                    <p
+                                                        class="font-Maison px-7 leading-5 tracking-[3px] text-[15px] font-semibold">
+                                                        Chief Builder of Rising Build and founder of the<span
+                                                            class="underline">Build Show Network</span></p>
+                                                    <a href="#"
+                                                        class="flex items-center font-Maison pt-11 px-7 gap-3 font-bold text-[15px] leading-5">Listen
+                                                        to Interview
+                                                        <img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="bg-white w-full max-w-[440px] py-9">
+                                                <div class="mb-0">
+                                                    <span class="flex items-center justify-center pb-8"><img
+                                                            class="rounded-3xl w-[382px]"
+                                                            src="./assets/images/webp/smilling_man.webp"
+                                                            alt="smilling_man"></span>
+                                                    <p class="font-Maison font-light text-[30px] leading-8 px-7">Matt
+                                                        Risinger on How to Develop Lasting Relationships with Builders
+                                                    </p>
+                                                    <p
+                                                        class="font-Maison px-7 leading-5 tracking-[3px] text-[15px] font-semibold">
+                                                        Chief Builder of Rising Build and founder of the<span
+                                                            class="underline">Build Show Network</span></p>
+                                                    <a href="#"
+                                                        class="flex items-center font-Maison pt-11 px-7 gap-3 font-bold text-[15px] leading-5">Listen
+                                                        to Interview
+                                                        <img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Tokyo" class="tabcontent relative">
+                        <div class="relative">
+                            <video class="w-[1300px] relative" autoplay muted loop
+                                src="./assets/images/png/cenimar_video.mov"></video>
+                            <div class="absolute top-0 left-0">
+                                <div class="xl:p-16">
+                                    <div class="flex items-center justify-between gap-24">
+                                        <div class="mb-0">
+                                            <p
+                                                class="text-white font-Schmal text-[80px] leading-[70px] whitespace-nowrap max-w-[415px]">
+                                                THE SMARTEST
+                                                <span class="block">MINDS IN
+                                                    THE</span>
+                                                INDUSTRY
+                                            </p>
+                                            <p
+                                                class="font-Maison text-[30px] text-white font-light max-w-[360px] leading-9">
+                                                Answer
+                                                our
+                                                questions and
+                                                listen to our
+                                                answers.</p>
+                                            <p
+                                                class="font-Maison text-white text-[15px] font-normal leading-5 max-w-[360px] tracking-[2.5px] mt-7">
+                                                This
+                                                is placeholder
+                                                but can add more the
+                                                business of
+                                                building,
+                                                some epic fails (and
+                                                how to avoid them) and everything
+                                                building science.</p>
+
+                                            <div class="pt-20">
+                                                <button
+                                                    class="text-white bg-[#ff4242] p-8 flex items-center justify-center gap-3">
+                                                    <img src="./assets/images/webp/Layer_1.png" alt="">
+                                                    <a href="#" class="font-Masion text-[15px] font-medium">Subscribe to
+                                                        Podcast <span class="text-[6px]">▼</span></a>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex items-center flex-col gap-14">
+                                            <img src="./assets/images/webp/Home-Depot-Logo.webp" alt="Home-Depot-Logo">
+                                            <img src="./assets/images/webp/Lowe's.webp" alt="Lowe’s">
+                                            <img src="./assets/images/webp/AIA.webp" alt="AIA">
+                                            <img src="./assets/images/webp/risinger_build.webp" alt="risinger_build">
+                                            <img src="./assets/images/webp/houzz.webp" alt="houzz">
+                                        </div>
+
+                                        <div class="center_slide max-w-[500px]">
+
+                                            <div class="bg-white w-full max-w-[440px] py-9">
+                                                <div class="mb-0">
+                                                    <span class="flex items-center justify-center pb-8"><img
+                                                            class="rounded-3xl w-[382px]"
+                                                            src="./assets/images/webp/smilling_man.webp"
+                                                            alt="smilling_man"></span>
+                                                    <p class="font-Maison font-light text-[30px] leading-8 px-7">Matt
+                                                        Risinger on How to Develop Lasting Relationships with Builders
+                                                    </p>
+                                                    <p
+                                                        class="font-Maison px-7 leading-5 tracking-[3px] text-[15px] font-semibold">
+                                                        Chief Builder of Rising Build and founder of the<span
+                                                            class="underline">Build Show Network</span></p>
+                                                    <a href="#"
+                                                        class="flex items-center font-Maison pt-11 px-7 gap-3 font-bold text-[15px] leading-5">Listen
+                                                        to Interview
+                                                        <img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="bg-white w-full max-w-[440px] py-9">
+                                                <div class="mb-0">
+                                                    <span class="flex items-center justify-center pb-8"><img
+                                                            class="rounded-3xl w-[382px]"
+                                                            src="./assets/images/webp/smilling_man.webp"
+                                                            alt="smilling_man"></span>
+                                                    <p class="font-Maison font-light text-[30px] leading-8 px-7">Matt
+                                                        Risinger on How to Develop Lasting Relationships with Builders
+                                                    </p>
+                                                    <p
+                                                        class="font-Maison px-7 leading-5 tracking-[3px] text-[15px] font-semibold">
+                                                        Chief Builder of Rising Build and founder of the<span
+                                                            class="underline">Build Show Network</span></p>
+                                                    <a href="#"
+                                                        class="flex items-center font-Maison pt-11 px-7 gap-3 font-bold text-[15px] leading-5">Listen
+                                                        to Interview
+                                                        <img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="bg-white w-full max-w-[440px] py-9">
+                                                <div class="mb-0">
+                                                    <span class="flex items-center justify-center pb-8"><img
+                                                            class="rounded-3xl w-[382px]"
+                                                            src="./assets/images/webp/smilling_man.webp"
+                                                            alt="smilling_man"></span>
+                                                    <p class="font-Maison font-light text-[30px] leading-8 px-7">Matt
+                                                        Risinger on How to Develop Lasting Relationships with Builders
+                                                    </p>
+                                                    <p
+                                                        class="font-Maison px-7 leading-5 tracking-[3px] text-[15px] font-semibold">
+                                                        Chief Builder of Rising Build and founder of the<span
+                                                            class="underline">Build Show Network</span></p>
+                                                    <a href="#"
+                                                        class="flex items-center font-Maison pt-11 px-7 gap-3 font-bold text-[15px] leading-5">Listen
+                                                        to Interview
+                                                        <img src="./assets/images/webp/left-arrow.png" alt=""></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- slider_sec -->
+    <section class="overflow-hidden pt-10 mt-1">
+        <div class="bg-[#097980] relative">
+            <img class="absolute top-[20%] left-0" src="./assets/images/webp/prev_arrow.webp" alt="">
+            <span class="absolute top-[20%] right-0"><img class="relative" src="./assets/images/webp/Next_arrow.webp"
+                    alt=""></span>
+            <img class="absolute top-[10%] left-1/4 translatey-1/2" src="./assets/images/webp/bg_img.webp" alt="">
+            <div class="flex items-center justify-center text-center">
+                <div class="pt-28">
+                    <p class="font-Maison text-[30px] font-light text-white">Actual businesses.
+                        <span class="block font-Schmal text-[80px] font-bold leading-[70px]">Actual results.</span>
+                    </p>
+                    <p class="font-Maison pt-12 text-white text-[15px] leading-5 tracking-[3px]">Businesses trust
+                        Venveo to power grow.
+                    </p>
+                </div>
+            </div>
+            <div class="flex center_slide_1 relative z-10 pt-20">
+
+                <div class="mb-0">
+                    <img class="w-full" src="./assets/images/webp/Jon-Vaughan-Testimonial.webp"
+                        alt="Grant-Farnsworth.webp">
+                    <p class="text-white font-Maison text-[30px] pt-20 text-center">“They are really aligned with how we
+                        are
+                        building the
+                        business from a strategic standpoint and from branding, messaging and cultural standpoint.”</p>
+                    <div class="pt-16">
+                        <a href="#" class="text-white text-center"><span class="block">Jon Vaughan,</span><span
+                                class="block"> REGIONAL VP-SE AT US LBM</span></a>
+                        <div class="flex items-center justify-center pt-3 pb-28"><img
+                                src="./assets/images/webp/US_LBM.webp" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="mb-0">
+                    <img class="w-full" src="./assets/images/webp/Grant-Farnsworth.webp" alt="Grant-Farnsworth.webp">
+                    <p class="text-white font-Maison text-[30px] pt-20 text-center">“They are really aligned with how we
+                        are
+                        building the
+                        business from a strategic standpoint and from branding, messaging and cultural standpoint.”</p>
+                    <div class="pt-16">
+                        <a href="#" class="text-white text-center"><span class="block">Jon Vaughan,</span><span
+                                class="block"> REGIONAL VP-SE AT US LBM</span></a>
+                        <div class="flex items-center justify-center pt-3 pb-28"><img
+                                src="./assets/images/webp/US_LBM.webp" alt=""></div>
+                    </div>
+                </div>
+
+                <div class="mb-0">
+                    <img class="w-full" src="./assets/images/webp/Michael-E-Testomnial_16_9.webp"
+                        alt="Grant-Farnsworth.webp">
+                    <p class="text-white font-Maison text-[30px] pt-20 text-center">“They are really aligned with how we
+                        are
+                        building the
+                        business from a strategic standpoint and from branding, messaging and cultural standpoint.”</p>
+                    <div class="pt-16">
+                        <a href="#" class="text-white text-center"><span class="block">Jon Vaughan,</span><span
+                                class="block"> REGIONAL VP-SE AT US LBM</span></a>
+                        <div class="flex items-center justify-center pt-3 pb-28"><img
+                                src="./assets/images/webp/US_LBM.webp" alt=""></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Learn from us. -->
+    <section class="overflow-hidden relative">
+        <img class="top-[0%] w-full left-0 absolute" src="./assets/images/webp/light_blue_line.webp" alt="">
+        <img class="w-full absolute hidden sm:block sm:top-[50%] lg:top-[35%]"
+            src="./assets/images/webp/yellow_lines.webp" alt="">
+        <div class="pt-24 mt-3">
+            <p
+                class="font-Schmal text-[70px] sm:text-[70px] md:text-[80px] font-bold leading-[70px] flex items-center text-center justify-center px-3 pb-3">
+                LEARN FROM US.
+            </p>
+
+            <p
+                class="font-Maison text-[15px] font-normal leading-5 tracking-[2.5px] flex items-center justify-center text-center px-3 pb-9">
+                Digital
+                marketing resources from Venveo to help you grow.</p>
+
+            <div class="flex justify-center gap-2">
+                <a href="#" class="font-Maison text-[15px] font-semibold leading-5">See All</a>
+                <a href="#" class="mt-0.5"><img src="./assets/images/webp/left-arrow.png" alt=""></a>
+            </div>
+
+            <div class="container px-0">
+                <div class="pt-10 sm:pt-12 md:pt-16 lg:pt-20">
+                    <div class="flex items-center justify-center">
+                        <div class="relative">
+                            <img class="sm:block hidden" src="./assets/images/webp/three_man_img.webp"
+                                alt="hand_img.webp">
+                            <img class="block sm:hidden" src="./assets/images/webp/two_man.webp" alt="">
+                            <span class="absolute right-[5%] top-[-4%]"><img
+                                    class="lg:w-[107px] md:w-[85px] sm:w-[70px] sm:block hidden"
+                                    src="./assets/images/webp/made_for_brands.webp" alt=""></span>
+
+                            <div class="absolute left-[2.5%] bottom-[2.5%] pe-2">
+                                <div
+                                    class="border-white border-2 border-solid bg-white rounded-3xl p-3 sm:p-4 md:p-5 lg:p-6 max-w-[390px]">
+                                    <p class="text-[#00AFB5] font-Maison text-[15px] font-normal leading-5 pb-4">GUIDES
+                                    </p>
+                                    <p class="font-Maison md:text-[30px] sm:text-[27px] text-[24px] font-light">
+                                        Marketing to Contractors and
+                                        Installers: <span class="block">The
+                                            Ultimate Guide</span>
+                                    </p>
+                                    <p class="font-Maison text-[15px] tracking-[2.5px] leading-5 pt-4 pb-9 font-light">
+                                        Understanding the
+                                        process and maximize
+                                        the opportunities</p>
+
+                                    <div class="flex items-center gap-4">
+                                        <a href="#">Read More</a>
+                                        <a href="#" class="mt-1"><img src="./assets/images/webp/left-arrow.png"
+                                                alt="left-arrow.png"></a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- img_card -->
+    <section class="overflow-hidden">
+        <div class="max-w-[1440px] mx-auto">
+            <div class="flex pt-4 sm:pt-6 md:pt-10 lg:pt-14 mt-1 gap-14 center_slider">
+
+                <div class="relative flex items-center justify-center">
+                    <span class="sm:block hidden"><img src="./assets/images/webp/bolt_img.webp" alt="bolt_img"></span>
+                    <span class="block sm:hidden"><img src="./assets/images/webp/bolt_img_1.webp" alt="bolt_img"></span>
+                    <div class="absolute bottom-[5%] left-[10%] right-[-5%] sm:right-0 sm:left-0 sm:px-6">
+                        <div
+                            class="max-w-[382px] sm:min-h-[324px] p-6 border-2 border-solid border-white bg-white rounded-3xl">
+                            <p class="font-Maison text-[15px] font-semibold text-[#00AFB5] sm:pb-4">multi-channel
+                                marketing
+                            </p>
+                            <p
+                                class="font-Maison text-[24px] sm:text-[25px] md:text-[26px] lg:text-[27px] xl:text-[30px] font-semibold text-black">
+                                How to Get Your Product into
+                                Lowe’s</p>
+                            <p
+                                class="font-Maison text-[15px] font-extralight text-black pt-2 tracking-[2.5px] hidden sm:block">
+                                Understanding the process and maximize the opportunities</p>
+
+                            <div class="flex items-center gap-4 pt-5 lg:pt-20">
+                                <a href="#" class="font-semibold text-[15px] font-Maison">Read More</a>
+                                <a href="#"><img src="./assets/images/webp/left-arrow.png" alt="left-arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center justify-center">
+                    <span class="sm:block hidden"><img src="./assets/images/webp/happiness.webp" alt="bolt_img"></span>
+                    <span class="block sm:hidden w-full"><img src="./assets/images/webp/happiness_1.webp"
+                            alt="bolt_img"></span>
+                    <div class="absolute bottom-[5%] right-[-5%] sm:right-0 sm:left-0 left-[12%] ps-6 sm:px-6">
+                        <div
+                            class="max-w-[382px] sm:min-h-[324px] p-6 border-2 border-solid border-white bg-white rounded-3xl">
+                            <p class="font-Maison text-[15px] font-semibold text-[#00AFB5] sm:pb-4">multi-channel
+                                marketing</p>
+                            <p
+                                class="font-Maison  text-[24px] sm:text-[25px] md:text-[26px] lg:text-[27px] xl:text-[30px] font-semibold text-black">
+                                How to Get Your
+                                Product into Lowe’s
+                            </p>
+                            <p
+                                class="font-Maison text-[15px] font-extralight text-black pt-2 tracking-[2.5px] hidden sm:block ">
+                                unlock
+                                substantial business growth by enhancing collaboration skills and digital marketing
+                                expertise</p>
+
+                            <div class="flex items-center gap-4 pt-5 lg:pt-14">
+                                <a href="#" class="font-semibold text-[15px] font-Maison mt-1">Read More</a>
+                                <a href="#"><img src="./assets/images/webp/left-arrow.png" alt="left-arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative flex items-center justify-center">
+                    <span class="sm:block hidden"><img src="./assets/images/webp/feet_img.webp" alt="bolt_img"></span>
+                    <span class="block sm:hidden w-full"><img src="./assets/images/webp/feet_img_1.webp"
+                            alt="bolt_img"></span>
+                    <div class="absolute bottom-[5%] sm:left-0 left-[12%] right-[-5%] sm:right-0 ps-6 sm:px-6">
+                        <div
+                            class="max-w-[382px] sm:min-h-[324px] p-6 border-2 border-solid border-white bg-white rounded-3xl">
+                            <p class="font-Maison text-[15px] font-semibold text-[#00AFB5] sm:pb-4">ECOMMERCE</p>
+                            <p
+                                class="font-Maison  text-[24px] sm:text-[25px] md:text-[26px] lg:text-[27px] xl:text-[30px]  font-semibold text-black leading-[30px] sm:leading-[37px]">
+                                How to Sell
+                                building Materials
+                                Online</p>
+                            <p
+                                class="font-Maison text-[15px] font-extralight text-black pt-2 tracking-[2.5px] hidden sm:block">
+                                Explore
+                                how selling building materials online opens up wider audiences, efficient sales and
+                                insightful data,</p>
+
+                            <div class="flex items-center gap-4 pt-5 sm:pt-14">
+                                <a href="#" class="font-semibold text-[15px] font-Maison mt-1">Read More</a>
+                                <a href="#"><img src="./assets/images/webp/left-arrow.png" alt="left-arrow.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- goals -->
+    <section class="overflow-hidden">
+        <div class=" bg-[url('/assets/images/webp/footer_bg.jpg')] bg-no-repeat bg-center bg-cover mt-16">
+            <div class="max-w-[800px] mx-auto px-3">
+                <div class="md:flex items-center justify-center gap-9 py-16">
+                    <div class="flex items-center justify-center text-center">
+                        <p class="font-Maison text-white text-[30px] sm:text-[35px] md:text-[40px] font-light">Ready to
+                            hit your goals?</p>
+                    </div>
+
+                    <div class="flex items-center justify-center pt-8 md:pt-0">
+                        <div
+                            class="bg-[#D2F038] cursor-pointer border-2 border-solid border-[#d2f038] max-w-[260px] p-8">
+                            <div class="flex items-center gap-3">
+                                <a href="#" class="font-bold font-Maison">Book a Strategy Call</a>
+                                <a href="#"><img src="./assets/images/png/arrow straight.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-[#097980]">
+        <div class="container max-w-[1320px] py-24">
+            <div
+                class="flex xl:justify-between justify-center xl:flex-row flex-col-reverse flex-wrap gap-14 md:gap-16 xl:gap-24">
+
+                <div class="md:flex justify-center gap-20 pt_10">
+                    <div class="sm:flex justify-center gap-20">
+                        <ul class="pb-10 sm:pb-0">
+                            <li class="text-white font-Maison text-[12px] font-medium pb-6">HOW WE HELP</li>
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Drive
+                                    More
+                                    Awareness</a></li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Get
+                                    more
+                                    Customers</a></li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Build
+                                    Your
+                                    Brand</a>
+                            </li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Improve
+                                    your
+                                    reputation</a></li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Track
+                                    Results</a>
+                            </li>
+                        </ul>
+
+                        <ul class="pb-10 sm:pb-0">
+                            <li class="text-white font-Maison text-[12px] font-medium pb-6">WHO WE HELP</li>
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Digital
+                                    Advertising</a></li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Search
+                                    Engine Ranking</a></li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Content
+                                    Marketing</a>
+                            </li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Programic
+                                    Advertising</a></li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Email
+                                    Marketing</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sm:flex justify-center gap-24 md:gap-20 sm:pt-10 md:pt-0">
+                        <ul class="pb-10 sm:pb-0">
+                            <li class="text-white font-Maison text-[12px] font-medium pb-6">WHY VENVEO</li>
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">About
+                                    Us</a></li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Careers</a>
+                            </li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Growth
+                                    Studies</a>
+                            </li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Testimonials</a>
+                            </li>
+                        </ul>
+
+                        <ul>
+                            <li class="text-white font-Maison text-[12px] font-medium pb-6">RESOURCES</li>
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Articles</a>
+                            </li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">News</a>
+                            </li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Webinars</a>
+                            </li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">EBooks</a>
+                            </li>
+
+                            <li><a href="#"
+                                    class="text-white font-Maison text-[15px] font-medium leading-8 hover:text-[#d2f038]">Podcast</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex justify-center">
+                    <div class="mb-0">
+                        <p class="text-[30px] text-white font-Maison text-light">Get weekly data — and insights.</p>
+                        <div class="pt-9">
+                            <div
+                                class="border-2 border-solid border-white rounded-[50px] max-w-[449px] py-5 px-5 sm:px-7">
+                                <div class="flex items-center justify-between">
+                                    <input type="text" placeholder="Enter Your Email"
+                                        class="bg-transparent font-normal font-Maison text-white">
+                                    <a href="#"
+                                        class="text-[#d2f038] font-Maison font-semibold text-[15px] leading-5">Get
+                                        Started</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-24 mt-2">
+                <div class="flex items-center gap-[67px] md:gap-[95px] lg:justify-between justify-center flex-wrap">
+
+
+                    <div class="mb-0 lg:order-1 order-2">
+                        <span class="flex justify-center sm:justify-start"><img
+                                src="./assets/images/webp/footer_logo.webp" alt=""></span>
+                        <p
+                            class="text-white font-Maison text-[13px] text-center sm:text-start font-normal leading-5 pt-7">
+                            Venveo is an
+                            award-winning
+                            digital marketing
+                            <span class="block">
+                                solutions
+                                provider. Since
+                                2003.</span>
+                            ©2023 Venveo
+                        </p>
+                    </div>
+
+                    <div class="flex gap-10 lg:order-2 sm:order-1">
+
+                        <div class="mb-0">
+                            <p class="text-[13px] font-Maison leading-3 text-white font-medium pb-8">VISIT</p>
+                            <a href="#" class="text-white hover:text-[#D2F038] text-[13px] font-Maison">100 N Main
+                                Street
+                                <span class="block">#201</span>
+                                Blacksburg, VA 24060</a>
+                        </div>
+
+                        <div class="mb-0">
+                            <p class="text-[13px] font-Maison leading-3 text-white font-medium pb-8">CONTACT</p>
+
+                            <div class="relative"><a href="#"
+                                    class="text-white font-Maison text-[13px] leading-5 hover:text-[#d2f038]">info@venveo.com</a>
+                                <img class="absolute" src="./assets/images/webp/footer_icon_line.webp" alt="">
+                            </div>
+                            <div
+                                class="mt-4 text-white font-Maison leading-5 font-normal relative hover:text-[#d2f038] text-[13px]">
+                                <a href="#">1 · 800 · 123 ·4567</a>
+                                <img class="absolute w-full" src="./assets/images/webp/footer_icon_line.webp" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mb-0 lg:order-3">
+                        <div class="flex gap-8 pb-8">
+                            <p class="text-white text-[13px] font-normal font-Maison">All Rights Reserved</p>
+                            <p class="text-white text-[13px] font-normal font-Maison">Privacy Policy</p>
+                        </div>
+                        <span class="flex items-center gap-9 flex-wrap">
+                            <a href="#"><img src="./assets/images/webp/Facebook.webp" alt=""></a>
+                            <a href="#"><img src="./assets/images/webp/Instagram.webp" alt=""></a>
+                            <a href="#"><img src="./assets/images/webp/X.webp" alt=""></a>
+                            <a href="#"><img src="./assets/images/webp/LinkedIn.webp" alt=""></a>
+                            <a href="#"><img src="./assets/images/webp/Youtube.webp" alt=""></a>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/tilt.js@1.1.21/dest/tilt.jquery.min.js"></script>
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- slick.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function opennav() {
+            document.getElementById("menu").style.left = "0%";
+            document.getElementsByTagName("body")[0].style.overflow = "hidden";
+        }
+        function closenav() {
+            document.getElementById("menu").style.left = "-100%";
+            document.getElementsByTagName("body")[0].style.overflow = "scroll";
+        }
+        // // TOP BUTTON
+        const topBtn = document.getElementById("topBtn");
+        window.addEventListener("scroll", function scrollFunction() {
+            if (document.documentElement.scrollTop > 100) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        });
+        const backToTop = () => {
+            document.documentElement.scrollTop = 0;
+        };
+
+        $('.center_slider').slick({
+            infinite: true,
+            dots: false,
+            arrows: false,
+            autoplay: true,
+            speed: 800,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+
+            responsive: [
+                {
+                    breakpoint: 1150,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1.65,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+            ]
+        });
+
+        $('.center_slide').slick({
+            infinite: true,
+            dots: false,
+            arrows: false,
+            autoplay: true,
+            vertical: true,
+            verticalSwiping: true,
+            speed: 800,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+
+            responsive: [{
+                breakpoint: 1150,
+                settings: {
+                    slidesToShow: 2.3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1,
+                    infinite: true,
+
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToShow: 1,
+                }
+            }]
+        });
+
+        $('.center_slide_1').slick({
+            infinite: true,
+            dots: true,
+            arrows: true,
+            autoplay: true,
+            speed: 800,
+            slidesToShow: 2.3,
+            slidesToScroll: 1,
+
+            responsive: [{
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }]
+        });
+
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
