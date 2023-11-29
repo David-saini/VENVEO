@@ -26,7 +26,6 @@
                         DEFAULT: "1rem",
                     },
                 },
-
                 extend: {
                     fontFamily: {
                         Maison: ['Maison-Neue'],
@@ -921,10 +920,14 @@
     <!-- slider_sec -->
     <section class="overflow-hidden pt-10 mt-1">
         <div class="bg-[#097980] relative">
-            <span class="absolute top-[60%] sm:top-[40%] left-0"><img class="relative z-10 w-[45px] md:w-[60px]"
-                    src="./assets/images/webp/prev_arrow.webp" alt=""></span>
-            <span class="absolute top-[60%] sm:top-[40%] right-0"><img class="relative z-10 w-[45px] md:w-[60px]"
-                    src="./assets/images/webp/Next_arrow.webp" alt=""></span>
+            <span class="absolute top-[60%] sm:top-[40%] left-0">
+                <img class="relative z-10 w-[45px] md:w-[60px] prev1" src="./assets/images/webp/prev_arrow.webp" alt="">
+            </span>
+
+            <span class="absolute top-[60%] sm:top-[40%] right-0">
+                <img class="relative z-10 w-[45px] md:w-[60px] Next1" src="./assets/images/webp/Next_arrow.webp" alt="">
+            </span>
+
             <img class="absolute top-[10%] left-1/4 translatey-1/2" src="./assets/images/webp/bg_img.webp" alt="">
 
             <div class="flex items-center justify-center text-center">
@@ -1510,6 +1513,8 @@
             speed: 800,
             slidesToShow: 1.67,
             slidesToScroll: 1,
+            prevArrow: $(".prev1"),
+            nextArrow: $(".Next1"),
             responsive: [
                 {
                     breakpoint: 1024,
