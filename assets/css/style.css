@@ -32,6 +32,14 @@ input.placeholder-red::placeholder {
     color: white !important;
 }
 
+.video-slider .slick-slide {
+    opacity: 0.2;
+}
+
+.video-slider .slick-current {
+    opacity: 1;
+}
+
 @media (max-width:1198px) {
     .pt_10 {
         padding-top: 40px;
